@@ -733,3 +733,27 @@ footer a {
 .hero h1 span:first-child {
   color: var(--ink);
 }
+
+/* A full task story: a readable stage selector beside an app-only capture. */
+.process { background: var(--soft); }
+.process-grid { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.65fr); gap: 30px; align-items: center; margin-top: 40px; }
+.process-steps { display: grid; gap: 12px; }
+.process-step { text-align: left; color: var(--muted); border: 1px solid transparent; border-radius: 18px; background: transparent; padding: 20px; }
+.process-step[aria-pressed="true"] { background: var(--glass); border-color: var(--accent); box-shadow: var(--shadow); }
+.process-step:hover { border-color: var(--accent); }
+.process-step .number { font-size: 12px; color: var(--accent); font-weight: 750; }
+.process-step strong { display: block; color: var(--ink); font-size: 20px; line-height: 1.3; margin: 5px 0 10px; }
+.process-step > span:last-child { display: block; font-size: 14px; line-height: 1.65; }
+.process-figure { min-width: 0; margin: 0; }
+.process-figure > a { display: block; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); background: var(--bg); }
+.process-figure img { width: 100%; }
+.process-figure figcaption { display: flex; gap: 12px; justify-content: space-between; margin-top: 18px; color: var(--muted); font-size: 12px; }
+.process-figure figcaption a { color: var(--accent); flex-shrink: 0; }
+@media (max-width: 800px) {
+  .process-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 25px; }
+  .process-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .process-step { padding: 12px 9px; border-color: var(--line); border-radius: 12px; }
+  .process-step strong { font-size: 14px; margin: 4px 0 0; }
+  .process-step > span:last-child { display: none; }
+  .process-figure figcaption { flex-wrap: wrap; font-size: 11px; }
+}

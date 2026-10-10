@@ -17,15 +17,17 @@ The website remembers only theme and language locally. No analytics, third-party
 
 GitHub Settings → Pages → Build and deployment → Source: GitHub Actions. Every push to `main` runs the tests, creates `dist/` from an explicit public-file allowlist, then deploys it. Pull requests test and build without deploying. Workflow actions are pinned to verified official commit SHAs. Only deployment has `pages: write` and `id-token: write`; repository contents are read-only. No custom secrets, cross-repository credentials, or access grants are needed.
 
-## Public/private boundary
+## Release and access
 
-This repository is public. The app repository `RangeKing/dsh-desktop-next` stays private. Do not copy application source, runtime data, account pages, logs, API keys, binaries, or signed release URLs here. The private Releases link requires pre-existing repository permission and can show 404 to visitors without access. Platform cards describe build targets, not verified installer availability. Initial app installers are unsigned tests and macOS is not notarized. The website makes no passing release-CI claim.
+The website is public; `RangeKing/dsh-desktop-next` remains a private app repository. Version v0.1.0 provides builds for macOS, Windows, and Linux to repository members. Download CTAs link to that exact release. The installation help explains unsigned test-build status and macOS notarization status alongside release checksums.
 
-Update public-safe product copy manually after checking the app's documentation. Do not add a cross-repository dispatch token to synchronize private release metadata.
+Publish only reviewed product copy and demonstration captures here. Application source, credentials, user documents, logs, and installer binaries belong in their original repositories. Update release information after checking the actual release; the site uses a public-only build allowlist.
 
-## Media provenance
+## Product story and media
 
-All five product images are actual app-only Linux Electron captures from October 10, 2026. Task/document content is synthetic fixture data. The native walkthrough is a 25.1-second edited sequence with held frames, not continuous real-time footage or model-execution evidence. No model calls, credentials, user documents, account screens, or private app source are published. Images are original app captures, not simulated UI. The stills are the selected walkthrough frames: conversation 006, preferences 002, background 005, document 009. GIF uses the reviewed full nine-frame walkthrough. Previews are read-only and have format limits.
+The bilingual website follows the user's journey: describe a task, choose the amount of process to see, retain useful context, and review the delivered file. A three-stage task story lets visitors inspect source reading, execution records, and document review. It supports keyboard buttons, translated image descriptions, and full-size image links.
+
+See [MEDIA.md](MEDIA.md) for provenance. All product images are actual Linux Electron app captures with sample task/document content. The task story uses controlled demonstration events. The workspace walkthrough is an opt-in, 25.1-second edited sequence with held frames. These captures present the product experience rather than live inference or a performance benchmark.
 
 ## Reuse and attribution
 

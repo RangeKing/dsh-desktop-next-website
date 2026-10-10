@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://rangeking.github.io/dsh-desktop-next-website/assets/conversation.jpg"
+      content="https://rangeking.github.io/dsh-desktop-next-website/assets/process-read.jpg"
     />
     <link rel="icon" href="./assets/deepseek.svg" type="image/svg+xml" />
     <link
@@ -43,7 +43,7 @@
         >
         <nav class="nav" aria-label="Main navigation" data-nav-label>
           <a data-i18n="nav.features" href="#features" class="">Features</a
-          ><a data-i18n="nav.tour" href="#tour" class="">Walkthrough</a
+          ><a data-i18n="nav.tour" href="#process" class="">In action</a
           ><a data-i18n="nav.privacy" href="#privacy" class="">Privacy</a
           ><a data-i18n="nav.access" href="#download" class="">Get the app</a>
         </nav>
@@ -83,7 +83,7 @@
               </h1>
               <p data-i18n="hero.body" class="lead">A task-first desktop for DeepSeek Harness. Research, write, explore code, and review documents with your conversations, agents, and results in one place.</p>
               <div class="cta-row">
-                <a data-i18n="hero.cta" href="#tour" class="button primary"
+                <a data-i18n="hero.cta" href="#process" class="button primary"
                   >See it in action →</a
                 ><a data-i18n="hero.access" href="#download" class="button"
                   >Download v0.1.0 →</a
@@ -98,10 +98,11 @@
                   ><span>DeepSeek Harness · Desktop Next</span>
                 </div>
                 <img
-                  src="./assets/conversation.jpg"
-                  alt="Actual desktop conversation showing synthetic delivered-file records"
-                  width="980"
-                  height="680"
+                  id="hero-image"
+                  src="./assets/process-read.jpg"
+                  alt="Demonstration task reading source material in the actual desktop app"
+                  width="1188"
+                  height="848"
                   fetchpriority="high"
                 />
               </div>
@@ -164,6 +165,45 @@
           </div>
         </div>
       </section>
+<section id="process" class="process">
+            <div class="wrap">
+            <p data-i18n="process.eye" class="eyebrow">A task, from start to finish</p>
+            <h2 data-i18n="process.title" >Follow the work. Open the result.</h2>
+            <p data-i18n="process.body" class="intro">Follow one sample task from reading source material to reviewing its deliveries. Choose a step to look closer.</p>
+            <div class="process-grid">
+            <div class="process-steps" role="group" aria-label="Task stages">
+            <button type="button" class="process-step" data-step="0" aria-pressed="true" aria-controls="process-image">
+            <span class="number">01 /</span>
+            <strong data-i18n="process.readt" >Read the source material</strong>
+            <span data-i18n="process.readb" >See the active tool and the material being read, right inside the conversation.</span>
+            </button>
+            <button type="button" class="process-step" data-step="1" aria-pressed="false" aria-controls="process-image">
+            <span class="number">02 /</span>
+            <strong data-i18n="process.workt" >Follow the execution</strong>
+            <span data-i18n="process.workb" >Inspect recorded actions and outputs as the task takes shape. Choose the amount of detail that suits you.</span>
+            </button>
+            <button type="button" class="process-step" data-step="2" aria-pressed="false" aria-controls="process-image">
+            <span class="number">03 /</span>
+            <strong data-i18n="process.resultt" >Review the delivery</strong>
+            <span data-i18n="process.resultb" >Open the delivered document beside the conversation and move from an answer to a result you can review.</span>
+            </button>
+            </div>
+            <figure class="process-figure">
+            <a id="process-zoom" href="./assets/process-read.jpg">
+            <img id="process-image" src="./assets/process-read.jpg" width="1188" height="848" loading="lazy" alt="Demonstration task reading source material in the actual desktop app" />
+            </a>
+            <figcaption>
+            <span>
+            <span data-i18n="process.caption" >Recorded in the actual desktop client using a demonstration task.</span> <a data-i18n="process.source" href="./MEDIA.md">Capture details</a>
+            </span>
+            <a id="process-full" href="./assets/process-read.jpg">
+            <span data-i18n="process.zoom" >Open full-size image ↗</span>
+            </a>
+            </figcaption>
+            </figure>
+            </div>
+            </div>
+            </section>
       <section class="tour" id="tour">
         <div class="wrap">
           <div class="tour-head">
@@ -203,11 +243,12 @@
         <div class="wrap split">
           <div class="image-shell">
             <img
+              id="context-image"
               src="./assets/background.jpg"
               width="980"
               height="680"
               loading="lazy"
-              alt="Native next-send background preview with synthetic task data"
+              alt="Task background preview in the actual desktop app"
             />
           </div>
           <div class="copy">
@@ -254,11 +295,12 @@
           </div>
           <div class="image-shell">
             <img
+              id="document-image"
               src="./assets/document.jpg"
               width="980"
               height="680"
               loading="lazy"
-              alt="Actual local Word-to-PDF preview of a synthetic test document"
+              alt="Local document preview of a sample Word file"
             />
           </div>
         </div>
