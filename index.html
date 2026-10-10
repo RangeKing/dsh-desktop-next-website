@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DeepSeek Harness · Desktop Next</title>
+    <meta
+      name="description"
+      content="An independent desktop home for DeepSeek Harness. Bring tasks, conversations, approvals, and useful results together."
+    />
+    <meta name="theme-color" content="#e9efff" />
+    <meta property="og:title" content="DeepSeek Harness · Desktop Next" />
+    <meta
+      property="og:description"
+      content="A calmer place to turn a request into useful work. Independent community desktop client."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://rangeking.github.io/dsh-desktop-next-website/assets/conversation.jpg"
+    />
+    <link rel="icon" href="./assets/deepseek.svg" type="image/svg+xml" />
+    <link
+      rel="canonical"
+      href="https://rangeking.github.io/dsh-desktop-next-website/"
+    />
+    <link rel="alternate" hreflang="en" href="./?lang=en" />
+    <link rel="alternate" hreflang="zh-CN" href="./?lang=zh-CN" />
+    <script src="./preferences.js"></script>
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <a data-i18n="skip" href="#main" class="skip">Skip to content</a>
+    <header>
+      <div class="wrap header-inner">
+        <a class="brand" href="#main" aria-label="DeepSeek Harness Desktop Next"
+          ><img
+            src="./assets/deepseek.svg"
+            alt=""
+            width="35"
+            height="35"
+          /><span>DeepSeek Harness<small>DESKTOP NEXT</small></span></a
+        >
+        <nav class="nav" aria-label="Main navigation" data-nav-label>
+          <a data-i18n="nav.features" href="#features" class="">Features</a
+          ><a data-i18n="nav.tour" href="#tour" class="">Walkthrough</a
+          ><a data-i18n="nav.privacy" href="#privacy" class="">Privacy</a
+          ><a data-i18n="nav.access" href="#download" class="">Get the app</a>
+        </nav>
+        <div class="controls">
+          <button
+            id="theme-toggle"
+            class="control"
+            type="button"
+            aria-label="Theme: system"
+          >
+            <span class="theme-symbol" aria-hidden="true">◐</span>
+            <span id="theme-label">Auto</span></button
+          ><label
+            ><span class="sr-only" hidden>Language</span
+            ><select id="language" class="control" aria-label="Language">
+              <option value="en">EN</option>
+              <option value="zh-CN">简中</option>
+            </select></label
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="pill">
+                <i class="dot" aria-hidden="true"></i
+                ><span data-i18n="hero.badge"
+                  >Independent community desktop client</span
+                >
+              </div>
+              <h1>
+                <span data-i18n="hero.title">Less juggling.</span
+                ><span data-i18n="hero.accent">More useful work.</span>
+              </h1>
+              <p data-i18n="hero.body" class="lead">
+                A calmer desktop home for DeepSeek Harness. Start with a
+                request. Keep the conversation, approvals, and files together,
+                all the way to the next step.
+              </p>
+              <div class="cta-row">
+                <a data-i18n="hero.cta" href="#tour" class="button primary"
+                  >Explore the desktop ↗</a
+                ><a data-i18n="hero.access" href="#download" class="button"
+                  >Get access →</a
+                >
+              </div>
+              <p data-i18n="hero.note" class="fine">
+                Early-stage · App repository is private · No public installer
+                downloads
+              </p>
+            </div>
+            <div class="product-stage">
+              <div class="product-window">
+                <div class="window-top" aria-hidden="true">
+                  <i></i><i></i><i></i
+                  ><span>DeepSeek Harness · Desktop Next</span>
+                </div>
+                <img
+                  src="./assets/conversation.jpg"
+                  alt="Actual desktop conversation showing synthetic delivered-file records"
+                  width="980"
+                  height="680"
+                  fetchpriority="high"
+                />
+              </div>
+              <div class="stage-label">
+                <b data-i18n="hero.capture">Actual Linux desktop capture</b
+                ><span data-i18n="hero.fixture"
+                  >Synthetic test content · No model request</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="hero-foot">
+            <strong data-i18n="hero.foot1">01 / A task-first workspace</strong
+            ><span data-i18n="hero.foot2"
+              >Office &amp; creative work · Code &amp; development</span
+            ><span data-i18n="hero.foot3"
+              >Chinese &amp; English · Keyboard friendly</span
+            >
+          </div>
+        </div>
+      </section>
+      <section id="features">
+        <div class="wrap">
+          <p data-i18n="features.eyebrow" class="eyebrow">
+            The work, in one place
+          </p>
+          <h2 data-i18n="features.title">
+            From “can you help?” to something you can use.
+          </h2>
+          <p data-i18n="features.body" class="intro">
+            Stay with the task instead of switching between fragments. Choose
+            how much detail you see, and keep important decisions within reach.
+          </p>
+          <div class="feature-grid">
+            <article class="feature">
+              <span class="number">01 /</span>
+              <h3 data-i18n="f01t">Your task. Your level of detail.</h3>
+              <p data-i18n="f01b">
+                Choose everyday work, development, or both. A skippable tour and
+                three display levels help you settle in. Approvals and errors
+                stay visible in every view.
+              </p>
+              <div class="micro">
+                <span data-i18n="f01tag0">Results only</span
+                ><span data-i18n="f01tag1">Key details</span
+                ><span data-i18n="f01tag2">Full details</span>
+              </div>
+            </article>
+            <article class="feature">
+              <span class="number">02 /</span>
+              <h3 data-i18n="f02t">Keep the useful context.</h3>
+              <p data-i18n="f02b">
+                Confirm task-scoped goals and decisions, then inspect the
+                next-send preview. Reusable starting points help you prepare
+                research, organization, and review drafts.
+              </p>
+              <div class="micro">
+                <span data-i18n="f02tag0">Task background</span
+                ><span data-i18n="f02tag1">Editable starters</span>
+              </div>
+            </article>
+            <article class="feature">
+              <span class="number">03 /</span>
+              <h3 data-i18n="f03t">Open the actual result.</h3>
+              <p data-i18n="f03b">
+                Read delivered PDFs, Word, PowerPoint, and spreadsheets locally.
+                Saved previews keep explicit capture boundaries, so an older
+                preview never silently becomes the current file.
+              </p>
+              <div class="micro">
+                <span data-i18n="f03tag0">Local previews</span
+                ><span data-i18n="f03tag1">Saved captures</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="tour" id="tour">
+        <div class="wrap">
+          <div class="tour-head">
+            <div>
+              <p data-i18n="tour.eyebrow" class="eyebrow">A closer look</p>
+              <h2 data-i18n="tour.title">See the real desktop.</h2>
+            </div>
+            <div class="tour-controls">
+              <button
+                class="button primary"
+                id="play-demo"
+                type="button"
+                aria-pressed="false"
+              >
+                <span data-i18n="tour.play"
+                  >Play walkthrough · 25s</span
+                ></button
+              ><button class="button" id="stop-demo" type="button" disabled>
+                <span data-i18n="tour.still">Show still</span>
+              </button>
+            </div>
+          </div>
+          <div class="tour-stage">
+            <img
+              id="tour-image"
+              src="./assets/preferences.jpg"
+              alt="Actual native first-use purpose and display preferences"
+              width="1188"
+              height="848"
+              loading="lazy"
+            />
+          </div>
+          <p data-i18n="tour.caption" class="caption">
+            Edited, sampled captures of the actual Linux Electron app, October
+            10, 2026. All task and document content is synthetic test data. No
+            live inference or model calls. Playback starts only when you choose
+            it.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrap split">
+          <div class="image-shell">
+            <img
+              src="./assets/background.jpg"
+              width="980"
+              height="680"
+              loading="lazy"
+              alt="Native next-send background preview with synthetic task data"
+            />
+          </div>
+          <div class="copy">
+            <p data-i18n="context.eye" class="eyebrow">
+              Continue with confidence
+            </p>
+            <h2 data-i18n="context.title">Keep your place. Keep control.</h2>
+            <p data-i18n="context.body">
+              Drafts belong to their task. Search the current conversation,
+              quote what matters, and return to the latest message when you are
+              ready.
+            </p>
+            <ul class="list">
+              <li>
+                <b data-i18n="approvalt">A clear moment to decide</b
+                ><span data-i18n="approvalb"
+                  >Review the operation and available context. Allow once or
+                  decline. Disconnected and interrupted states stay
+                  honest.</span
+                >
+              </li>
+              <li>
+                <b data-i18n="teamst">Teams, when the task needs them</b
+                ><span data-i18n="teamsb"
+                  >Collaboration is off by default and scoped to a task. Inspect
+                  recorded members and dependencies; shared workspaces are not
+                  isolation.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap split reverse">
+          <div class="copy">
+            <p data-i18n="docs.eye" class="eyebrow">
+              Useful beyond the conversation
+            </p>
+            <h2 data-i18n="docs.title">The file is part of the work.</h2>
+            <p data-i18n="docs.body">
+              Open a delivered file from its real record. Read a PDF, inspect a
+              worksheet, or preview Word and PowerPoint through local
+              conversion. No external document viewer is required.
+            </p>
+            <ul class="list">
+              <li>
+                <span data-i18n="docs.limit"
+                  >Read-only previews. No formula calculation, macro execution,
+                  or document editing. Complex formatting and charts may
+                  differ.</span
+                >
+              </li>
+              <li>
+                <span data-i18n="docs.cache"
+                  >Saved previews are bounded local captures, not source-file
+                  version control or a backup.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="image-shell">
+            <img
+              src="./assets/document.jpg"
+              width="980"
+              height="680"
+              loading="lazy"
+              alt="Actual local Word-to-PDF preview of a synthetic test document"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="privacy" id="privacy">
+        <div class="wrap">
+          <p data-i18n="privacy.eye" class="eyebrow">Clear boundaries</p>
+          <h2 data-i18n="privacy.title">
+            Local where it should be. Explicit when it leaves.
+          </h2>
+          <div class="privacy-grid">
+            <div>
+              <h3 data-i18n="privacy.localt">Task background stays scoped</h3>
+              <p data-i18n="privacy.localb">
+                Background is stored on this device for the current task. Only
+                confirmed, enabled entries are included in the next-send
+                preview. Referencing a file does not automatically read it.
+                Model requests send content to your configured provider and may
+                incur charges.
+              </p>
+            </div>
+            <div>
+              <h3 data-i18n="privacy.connectt">
+                Your connection, clearly explained
+              </h3>
+              <p data-i18n="privacy.connectb">
+                Use official Harness provider setup or the dedicated
+                ChatGPT/Codex authorization flow. Credentials are managed by the
+                local runtime, not an OS-encrypted keychain. This website
+                contains no analytics, tracking scripts, or account forms.
+                GitHub Pages may keep hosting logs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="download" id="download">
+        <div class="wrap">
+          <p data-i18n="download.eye" class="eyebrow">Get the desktop</p>
+          <h2 data-i18n="download.title">
+            A public introduction. A private early-stage app.
+          </h2>
+          <p data-i18n="download.body" class="intro">
+            The app repository and releases require existing repository access.
+            This website does not grant access or host installers. Open Releases
+            to check availability for your platform.
+          </p>
+          <div class="platforms">
+            <article class="platform">
+              <h3>macOS</h3>
+              <p data-i18n="platform.macOS">
+                Apple Silicon + Intel · DMG / ZIP
+              </p>
+              <span data-i18n="target.macOS"
+                >Build target · Availability in private Releases</span
+              >
+            </article>
+            <article class="platform">
+              <h3>Windows</h3>
+              <p data-i18n="platform.Windows">x64 · EXE</p>
+              <span data-i18n="target.Windows"
+                >Build target · Availability in private Releases</span
+              >
+            </article>
+            <article class="platform">
+              <h3>Linux</h3>
+              <p data-i18n="platform.Linux">x64 · AppImage</p>
+              <span data-i18n="target.Linux"
+                >Build target · Availability in private Releases</span
+              >
+            </article>
+          </div>
+          <div class="cta-row" style="justify-content: center">
+            <a
+              data-i18n="download.release"
+              href="https://github.com/RangeKing/dsh-desktop-next/releases"
+              class="button primary"
+              >Open private Releases ↗</a
+            ><a
+              data-i18n="download.source"
+              href="https://github.com/RangeKing/dsh-desktop-next-website"
+              class="button"
+              >Website source ↗</a
+            >
+          </div>
+          <p data-i18n="download.warning" class="fine">
+            Initial installers are unsigned test builds; macOS builds are not
+            notarized. Use only a completed release with its manifest and
+            SHA-256 checksums. If your OS blocks a build, stop and report the
+            warning. Do not disable security protections.
+          </p>
+          <div class="faq">
+            <details>
+              <summary data-i18n="faq.officialq">
+                Is this an official DeepSeek app?
+              </summary>
+              <p data-i18n="faq.officialb">
+                No. Desktop Next is an independent community desktop client for
+                DeepSeek Harness. DeepSeek names and marks belong to their
+                respective owners. No official endorsement is implied.
+              </p>
+            </details>
+            <details>
+              <summary data-i18n="faq.accessq">
+                Why does the Releases link show 404?
+              </summary>
+              <p data-i18n="faq.accessb">
+                GitHub may show 404 when you are not signed in with an account
+                that has access to the private app repository. The public
+                website repository contains only the website, not the app source
+                or binaries.
+              </p>
+            </details>
+            <details>
+              <summary data-i18n="faq.demoq">
+                Does the walkthrough show live model execution?
+              </summary>
+              <p data-i18n="faq.demob">
+                No. It shows real native interface states with clearly labeled
+                synthetic task and document fixtures. It is an edited
+                walkthrough, not continuous real-time footage or proof of live
+                provider execution.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-inner">
+        <div>
+          <strong>DeepSeek Harness · Desktop Next</strong>
+          <p data-i18n="footer.note">
+            Independent community client. Not an official DeepSeek distribution.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a
+            data-i18n="footer.source"
+            href="https://github.com/RangeKing/dsh-desktop-next-website"
+            class=""
+            >Website source</a
+          ><a
+            data-i18n="footer.credit"
+            href="https://github.com/RangeKing/vibemeter-website"
+            class=""
+            >Built on VibeMeter’s website</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./site-locales.js"></script>
+    <script src="./site.js"></script>
+  </body>
+</html>

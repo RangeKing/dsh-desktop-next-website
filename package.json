@@ -1,0 +1,14 @@
+{
+  "name": "dsh-desktop-next-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public website for the independent DeepSeek Harness desktop client",
+  "scripts": {
+    "test": "node --test scripts/site.test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

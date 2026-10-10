@@ -1,0 +1,96 @@
+window.DSHWebsiteLocales = {
+  "zh-CN": {
+    skip: "跳到正文",
+    "nav.features": "功能",
+    "nav.tour": "演示",
+    "nav.privacy": "隐私",
+    "nav.access": "获取应用",
+    "hero.badge": "独立社区桌面客户端",
+    "hero.title": "把工作放在一起。",
+    "hero.accent": "让结果清晰可见。",
+    "hero.body":
+      "为 DeepSeek Harness 打造更从容的桌面工作空间。从一句需求开始，把对话、审批和文件留在同一个任务里，顺着结果继续下一步。",
+    "hero.cta": "了解桌面应用 ↗",
+    "hero.access": "获取方式 →",
+    "hero.note": "早期阶段 · 应用仓库保持私有 · 暂无公开安装包下载",
+    "hero.capture": "真实 Linux 桌面画面",
+    "hero.fixture": "合成测试内容 · 未调用模型",
+    "hero.foot1": "01 / 以任务为中心的工作空间",
+    "hero.foot2": "办公与创作 · 编码与开发",
+    "hero.foot3": "中英文 · 支持键盘操作",
+    "features.eyebrow": "把工作连起来",
+    "features.title": "从一句“帮我做”，到真正能用的结果。",
+    "features.body":
+      "不用在零散信息间反复切换。围绕任务继续工作，自己决定过程细节的多少，让重要决定始终可见。",
+    f01t: "你的任务，你的细节偏好。",
+    f01b: "选择办公创作、代码开发，或两者兼顾。可跳过的引导和三级过程显示帮助你上手，每一级都保留审批与错误。",
+    f01tag0: "仅结果",
+    f01tag1: "关键过程",
+    f01tag2: "完整过程",
+    f02t: "留下真正有用的背景。",
+    f02b: "确认当前任务的目标与决定，发送前检查即将附带的背景。可复用起点帮助你准备研究、整理和审查草稿。",
+    f02tag0: "任务背景",
+    f02tag1: "可编辑起点",
+    f03t: "打开实际交付的文件。",
+    f03b: "在本机阅读交付的 PDF、Word、PowerPoint 和表格。已保存预览保留明确的采集边界，不会把旧预览悄悄当成当前文件。",
+    f03tag0: "本地预览",
+    f03tag1: "已保存采集",
+    "tour.eyebrow": "近距离看看",
+    "tour.title": "看看真实的桌面。",
+    "tour.play": "播放演示 · 25 秒",
+    "tour.still": "显示静态画面",
+    "tour.caption":
+      "2026 年 10 月 10 日实际 Linux Electron 应用的采样剪辑。任务和文档均为合成测试内容，未进行实时推理或模型调用。仅在你选择播放后开始动图。",
+    "context.eye": "从容继续",
+    "context.title": "接得上进度，也握得住边界。",
+    "context.body":
+      "草稿保留在各自任务里。搜索当前对话、引用关键内容，准备好之后再回到最新消息。",
+    approvalt: "明确的决定时刻",
+    approvalb: "查看操作与已有上下文，单次允许或拒绝，如实显示断连与中断状态。",
+    teamst: "需要时，再开启团队",
+    teamsb:
+      "协作默认关闭，仅限当前任务。查看已记录的成员与依赖；共享工作空间不等于隔离。",
+    "docs.eye": "不止停留在对话里",
+    "docs.title": "文件本来就是工作的一部分。",
+    "docs.body":
+      "从真实交付记录打开文件。阅读 PDF、检查工作表，或通过本地转换预览 Word 和 PowerPoint，不需要外部文档查看服务。",
+    "docs.limit":
+      "预览只读，不计算公式、不运行宏、不编辑文档；复杂格式与图表可能存在差异。",
+    "docs.cache":
+      "已保存预览是有容量与期限限制的本地采集，不是源文件版本控制或备份。",
+    "privacy.eye": "明确边界",
+    "privacy.title": "该留在本机的留在本机，该发送的让你看清。",
+    "privacy.localt": "任务背景，各自独立",
+    "privacy.localb":
+      "背景存储在当前设备、归属于当前任务。只有已确认并启用的条目才会出现在下次发送预览中，引用文件不会自动读取它。模型请求会将内容发送给你配置的提供商，并可能产生费用。",
+    "privacy.connectt": "清楚交代连接方式",
+    "privacy.connectb":
+      "通过官方 Harness 提供商设置或专门的 ChatGPT/Codex 授权流程连接。凭据由本地运行时管理，并非保存在操作系统加密钥匙串中。此网站不包含分析、追踪脚本或账户表单；GitHub Pages 可能保留托管日志。",
+    "download.eye": "获取桌面应用",
+    "download.title": "公开了解，私有试用。",
+    "download.body":
+      "应用仓库与发布页需要已有的仓库访问权限。此网站不授予访问权限，也不托管安装包。前往 Releases 查看适合你平台的实际发布情况。",
+    "platform.macOS": "Apple Silicon 与 Intel · DMG / ZIP",
+    "target.macOS": "构建目标 · 以私有 Releases 实际情况为准",
+    "platform.Windows": "x64 · EXE",
+    "target.Windows": "构建目标 · 以私有 Releases 实际情况为准",
+    "platform.Linux": "x64 · AppImage",
+    "target.Linux": "构建目标 · 以私有 Releases 实际情况为准",
+    "download.release": "打开私有 Releases ↗",
+    "download.source": "网站源码 ↗",
+    "download.warning":
+      "首批安装包属于未签名测试构建，macOS 版本未经过公证。仅使用具备完整发布清单与 SHA-256 校验值的版本。若系统拦截安装，请停止并报告警告，不要关闭安全保护。",
+    "faq.officialq": "这是 DeepSeek 官方应用吗？",
+    "faq.officialb":
+      "不是。Desktop Next 是 DeepSeek Harness 的独立社区桌面客户端。DeepSeek 名称与标识归各自权利人所有，不代表官方认可。",
+    "faq.accessq": "为什么 Releases 链接显示 404？",
+    "faq.accessb":
+      "如果未登录具有私有应用仓库权限的账户，GitHub 可能显示 404。公开网站仓库只包含网站，不含应用源码或二进制安装包。",
+    "faq.demoq": "演示展示了真实模型执行吗？",
+    "faq.demob":
+      "没有。演示展示真实原生界面状态，使用明确标注的合成任务与文档测试数据。这是剪辑后的操作演示，并非连续实时录像，也不证明真实提供商执行。",
+    "footer.note": "独立社区客户端，非 DeepSeek 官方发行版。",
+    "footer.source": "网站源码",
+    "footer.credit": "复用 VibeMeter 网站基础",
+  },
+};
