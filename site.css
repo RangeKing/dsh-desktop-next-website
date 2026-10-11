@@ -272,36 +272,16 @@ footer a:hover {
   padding: 14px 0;
 }
 .product-window {
+  display: block;
   border: 1px solid #ffffff82;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: var(--shadow);
   background: #61808f;
-  transform: rotate(-1deg);
-}
-.window-top {
-  height: 31px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 0 13px;
-  background: var(--glass);
-  font-size: 9px;
-  color: var(--muted);
-}
-.window-top i {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #96a7bf;
-}
-.window-top span {
-  margin: auto;
 }
 .product-window img {
   width: 100%;
-  aspect-ratio: 980/680;
-  object-fit: contain;
+  height: auto;
 }
 .stage-label {
   display: flex;
