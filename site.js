@@ -13,8 +13,8 @@
   const labels = {en: {system:'Auto',light:'Light',dark:'Dark'},'zh-CN':{system:'自动',light:'浅色',dark:'深色'}};
   let tourPlaying = false;
   const imageDescriptions = {
-    en: {hero:'Demonstration task reading source material in the actual desktop app', context:'Task background preview in the actual desktop app', document:'Local document preview of a sample Word file', still:'Actual native first-use purpose and display preferences', tour:'Edited native desktop walkthrough using sample tasks and documents'},
-    'zh-CN': {hero:'实际桌面客户端中的演示任务：读取资料', context:'实际桌面客户端中的任务背景预览', document:'样例 Word 文件的本地文档预览', still:'实际客户端中的首次使用目标与显示偏好设置', tour:'使用演示任务和样例文档录制的原生客户端剪辑'}
+    en: {hero:'Demonstration task reading source material in the actual desktop app', context:'Task background preview in the actual desktop app', document:'Local document preview of a sample Word file', still:'Actual native purpose and display preferences', tour:'Edited native desktop walkthrough using sample tasks and documents'},
+    'zh-CN': {hero:'实际桌面客户端中的演示任务：读取资料', context:'实际桌面客户端中的任务背景预览', document:'样例 Word 文件的本地文档预览', still:'实际客户端中的使用目标与显示偏好设置', tour:'使用演示任务和样例文档录制的原生客户端剪辑'}
   };
   function renderImageDescriptions() {
     const labels = imageDescriptions[locale];
@@ -68,9 +68,9 @@
   const play = document.querySelector('#play-demo');
   const stop = document.querySelector('#stop-demo');
   const img = document.querySelector('#tour-image');
-  function stopDemo() { img.src = './assets/preferences.jpg'; tourPlaying = false; renderImageDescriptions(); play.setAttribute('aria-pressed','false'); stop.disabled = true; }
+  function stopDemo() { img.src = './assets/preferences.png'; tourPlaying = false; renderImageDescriptions(); play.setAttribute('aria-pressed','false'); stop.disabled = true; }
   play.addEventListener('click', () => { img.src = './assets/walkthrough.gif'; tourPlaying = true; renderImageDescriptions(); play.setAttribute('aria-pressed','true'); stop.disabled = false; });
   stop.addEventListener('click', stopDemo);
   matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => { if(e.matches) stopDemo(); });
-  img.addEventListener('error', () => { if(img.getAttribute('src') !== './assets/preferences.jpg') stopDemo(); });
+  img.addEventListener('error', () => { if(img.getAttribute('src') !== './assets/preferences.png') stopDemo(); });
 })();

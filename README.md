@@ -27,7 +27,7 @@ Publish only reviewed product copy and demonstration captures here. Application 
 
 The bilingual website follows the user's journey: describe a task, choose the amount of process to see, retain useful context, and review the delivered file. A three-stage task story lets visitors inspect source reading, execution records, and document review. It supports keyboard buttons, translated image descriptions, and full-size image links.
 
-See [MEDIA.md](MEDIA.md) for provenance. All product images are actual Linux Electron app captures with sample task/document content. The task story uses controlled demonstration events. The workspace walkthrough is an opt-in, 25.1-second edited sequence with held frames. These captures present the product experience rather than live inference or a performance benchmark.
+See [MEDIA.md](MEDIA.md) for provenance. All still product images are lossless native PNG captures from the Linux Electron app with sample task/document content. The task story uses controlled demonstration events. The workspace walkthrough is an opt-in, 18.28-second edited native-PNG sequence with held frames. These captures present the product experience rather than live inference or a performance benchmark.
 
 ## Reuse and attribution
 

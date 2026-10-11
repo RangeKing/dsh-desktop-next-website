@@ -20,9 +20,13 @@ Capture date: October 10, 2026. These are app screenshots, not generated interfa
 
 ## Workspace walkthrough / 工作空间演示
 
-`assets/walkthrough.gif` is a 25.1-second edited sequence of nine sampled native-app frames with held intervals. It introduces setup, preferences, task background, and local document previews. Playback is opt-in; a still appears initially. The supporting stills are `conversation.jpg`, `preferences.jpg`, `background.jpg`, and `document.jpg`.
+`assets/walkthrough.gif` is an 18.28-second edited sequence made from 13 new-font native PNG frames: reading, nine consecutive action-focus frames, delivered files, Word preview, and spreadsheet preview. Reading and result stills are held for inspection; focus frames preserve their recorded cadence with a final hold. GIF palette quantization is applied at the original 1188 × 848 size. Playback is opt-in; a new preferences capture appears initially.
 
-`assets/walkthrough.gif` 是由九帧原生应用画面组成的 25.1 秒剪辑，展示初始设置、偏好、任务背景和本地文档预览。点击播放后开始，初始显示静态画面。
+`assets/walkthrough.gif` 来自新版字体的 13 帧原生 PNG 画面，长 18.28 秒，展示读取、行动定位、交付文件、Word 与表格预览。动图保留原始 1188 × 848 尺寸，使用 GIF 调色板编码；点击播放后开始，初始显示新的偏好设置截图。
+
+The supporting `preferences.png` and `background.png` are original native PNG captures of the updated application. The background panel shows a manually entered demonstration goal. The document section reuses the lossless `process-result.png` capture. Old JPEG captures have been removed.
+
+偏好设置和任务背景均使用更新后客户端的原生 PNG；背景面板展示手动填写的演示目标。文档区复用无损的交付预览截图。
 
 ## Published task-image checksums / 公开任务图片校验
 
@@ -31,3 +35,5 @@ Original capture bytes are preserved; only filenames change. All three captures 
 - `process-read.png`: `f9e0130e3f2ab531e854dc5737bcd0b15479a7d6a945acc08ef7a89f416001da`
 - `process-work.png`: `4d280a26c4dadb9e0ab09461ae0fcc95d7c6f39b7927e2c497568d9987231826`
 - `process-result.png`: `fd3f3a0db126abbc7823d28dbad0f2f38e6538e95c0d3d187872178faa369a5f`
+
+- `walkthrough.gif`: `300971c9117db4f4b3611b3e4a8de02ebcbaee0f96b4ea9ba80869e083c9975b`
