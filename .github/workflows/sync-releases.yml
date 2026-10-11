@@ -27,12 +27,19 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
           node-version: 22
+      - name: Check whether scheduled synchronization is configured
+        id: credential-check
+        env:
+          DSH_RELEASE_READ_TOKEN: ${{ secrets.DSH_RELEASE_READ_TOKEN }}
+        run: node scripts/check-sync-credential.mjs
       - name: Read and validate private release completion metadata
+        if: steps.credential-check.outputs.enabled == 'true'
         id: sync
         env:
           DSH_RELEASE_READ_TOKEN: ${{ secrets.DSH_RELEASE_READ_TOKEN }}
         run: node scripts/sync-releases.mjs
       - name: Check whether the public deployment matches
+        if: steps.credential-check.outputs.enabled == 'true'
         id: deployment-check
         env:
           FEED_CHANGED: ${{ steps.sync.outputs.changed }}
