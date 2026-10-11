@@ -1,0 +1,70 @@
+name: Sync verified release metadata
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      force_deploy:
+        description: Rebuild and redeploy verified data after a previous deployment failure
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: github.repository == 'RangeKing/dsh-desktop-next-website' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      deploy_needed: ${{ steps.deployment-check.outputs.needed }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 22
+      - name: Read and validate private release completion metadata
+        id: sync
+        env:
+          DSH_RELEASE_READ_TOKEN: ${{ secrets.DSH_RELEASE_READ_TOKEN }}
+        run: node scripts/sync-releases.mjs
+      - name: Check whether the public deployment matches
+        id: deployment-check
+        env:
+          FEED_CHANGED: ${{ steps.sync.outputs.changed }}
+          FORCE_DEPLOY: ${{ inputs.force_deploy }}
+        run: node scripts/check-release-deployment.mjs
+      - name: Test and build reviewed public data
+        if: steps.deployment-check.outputs.needed == 'true'
+        run: npm run check
+      - name: Commit only the verified public feed
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/releases.json
+          git commit -m 'Refresh verified public release metadata'
+          git push origin HEAD:main
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
+        if: steps.deployment-check.outputs.needed == 'true'
+        with:
+          path: dist
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.deploy_needed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
+      - id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e

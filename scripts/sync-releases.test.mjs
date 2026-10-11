@@ -1,0 +1,19 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {collectReleases,safeFailureMessage} from './sync-releases.mjs';
+import {fixture} from './release-test-fixture.mjs';
+function source(){const f=fixture();f.record.release.assets.forEach((a,i)=>a.id=i+1);return f;}
+function requestFor(f,seen,redirect=false){return async(url,options)=>{
+ seen.push({url,options});
+ if(url.includes('/releases?'))return new Response(JSON.stringify([f.record.release]));
+ if(url.includes('/git/ref/'))return new Response(JSON.stringify({object:{type:'commit',sha:f.record.expectedSourceSha}}));
+ const asset=f.record.release.assets.find(a=>url.endsWith('/releases/assets/'+a.id));
+ if(asset){if(redirect)return new Response(null,{status:302,headers:{location:'https://release-assets.githubusercontent.com/test/'+asset.name+'?signed=fixture'}});return new Response(asset.name==='release-manifest.json'?f.record.manifestText:f.record.checksumsText);}
+ if(url.startsWith('https://release-assets.githubusercontent.com/'))return new Response(url.includes('release-manifest.json')?f.record.manifestText:f.record.checksumsText);
+ throw Error('Unexpected request');
+};}
+test('collects only completion metadata, verifies all assets, and never downloads installers',async()=>{const f=source(),seen=[];const feed=await collectReleases({token:'fixture-only',request:requestFor(f,seen),now:()=> '2026-10-11T10:00:00Z'});assert.equal(feed.releases[0].version,'0.2.0');assert.equal(feed.releases[0].access,'repository-members');assert.equal(seen.length,4);assert.ok(seen.every(c=>!c.url.includes('/contents/')&&!/\.exe|\.dmg|\.AppImage/.test(c.url)));assert.doesNotMatch(JSON.stringify(feed),/Private release body|private-author|fixture-only/)});
+test('GitHub asset redirects omit authorization entirely',async()=>{const f=source(),seen=[];await collectReleases({token:'fixture-only',request:requestFor(f,seen,true)});for(const c of seen.filter(c=>c.url.startsWith('https://release-assets.')))assert.equal(c.options.headers.Authorization,undefined)});
+test('missing token, access failures, hostile redirects and incomplete candidates fail safely',async()=>{let calls=0;await assert.rejects(collectReleases({token:'',request:async()=>{calls++}}),/not configured/);assert.equal(calls,0);for(const status of [401,403,429])await assert.rejects(collectReleases({token:'fixture',request:async()=>new Response('',{status})}),new RegExp(String(status)));const f=source();f.record.release.assets=f.record.release.assets.filter(a=>a.name!=='release-manifest.json');await assert.rejects(collectReleases({token:'fixture',request:requestFor(f,[])}),/invalid-public-feed/);const good=source(),req=requestFor(good,[]);await assert.rejects(collectReleases({token:'fixture',request:async(u,o)=>u.includes('/releases/assets/')?new Response(null,{status:302,headers:{location:'https://attacker.invalid/?token=x'}}):req(u,o)}),/Untrusted/)});
+test('malformed private metadata is never printed in the public failure message',async()=>{try{await collectReleases({token:'fixture',request:async()=>new Response('{"private-secret-abcdef":broken}')})}catch(error){assert.doesNotMatch(safeFailureMessage(error),/abcdef|broken|private-secret/);assert.match(safeFailureMessage(error),/unchanged/)}assert.doesNotMatch(safeFailureMessage(new Error('https://signed.invalid/?token=private')),/signed|token=private/)});
+test('missing credential CLI exits unsuccessfully and preserves the committed feed bytes',async()=>{const {spawnSync}=await import('node:child_process');const {readFileSync}=await import('node:fs');const before=readFileSync('data/releases.json','utf8');const result=spawnSync(process.execPath,['scripts/sync-releases.mjs'],{env:{...process.env,DSH_RELEASE_READ_TOKEN:''},encoding:'utf8'});assert.equal(result.status,1);assert.match(result.stderr,/not configured/);assert.equal(readFileSync('data/releases.json','utf8'),before)});

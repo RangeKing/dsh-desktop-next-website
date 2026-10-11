@@ -1,0 +1,10 @@
+{
+  "v0.1.1": {
+    "schemaVersion": 1,
+    "version": "0.1.1",
+    "notes": {
+      "en": "Clearer typography with bundled Inter and Noto Sans SC fonts. Sharper native PNG product captures and a single set of window controls. Available as unsigned test builds for macOS, Windows, and Linux.",
+      "zh": "应用捆绑 Inter 与 Noto Sans SC 字体，提升中英文阅读体验。使用更清晰的原生 PNG 画面，保留一组窗口控件。提供 macOS、Windows 和 Linux 未签名测试安装包。"
+    }
+  }
+}
