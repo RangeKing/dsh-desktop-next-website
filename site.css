@@ -757,3 +757,8 @@ footer a {
 .extensions-context { max-width: 850px; color: var(--muted); line-height: 1.8; margin: 28px 0 0; }
 .extension-preview { color: var(--accent); max-width: 800px; line-height: 1.7; font-size: 14px; }
 #extension-image { height: auto; }
+
+.asset-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.asset-links a { font-size: 13px; color: var(--accent); padding: 6px 0; }
+.release-notes { padding: 24px; border: 1px solid var(--line); border-radius: 18px; text-align: left; margin-top: 28px; }
+#release-notes-body { white-space: pre-wrap; color: var(--muted); line-height: 1.8; }

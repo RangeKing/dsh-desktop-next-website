@@ -8,6 +8,7 @@
       name="description"
       content="An independent desktop home for DeepSeek Harness. Bring tasks, conversations, approvals, and useful results together."
     />
+    <meta name="release-feed" content="./data/releases.json" />
     <meta name="theme-color" content="#e9efff" />
     <meta property="og:title" content="DeepSeek Harness · Desktop Next" />
     <meta
@@ -359,6 +360,7 @@
               <span data-i18n="target.macOS"
                 >v0.1.1 · Repository access required</span
               >
+<div class="asset-links"><a data-release-asset="macos:arm64:dmg" href="https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1">Apple Silicon · DMG</a><a data-release-asset="macos:arm64:zip" href="https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1">Apple Silicon · ZIP</a><a data-release-asset="macos:x64:dmg" href="https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1">Intel · DMG</a><a data-release-asset="macos:x64:zip" href="https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1">Intel · ZIP</a></div>
             </article>
             <article class="platform">
               <h3>Windows</h3>
@@ -366,6 +368,7 @@
               <span data-i18n="target.Windows"
                 >v0.1.1 · Repository access required</span
               >
+<div class="asset-links"><a data-release-asset="windows:x64:exe" href="https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1">x64 · EXE</a></div>
             </article>
             <article class="platform">
               <h3>Linux</h3>
@@ -373,6 +376,7 @@
               <span data-i18n="target.Linux"
                 >v0.1.1 · Repository access required</span
               >
+<div class="asset-links"><a data-release-asset="linux:x64:AppImage" href="https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1">x64 · AppImage</a></div>
             </article>
           </div>
           <div class="cta-row" style="justify-content: center">
@@ -389,6 +393,7 @@
             >
           </div>
           <p data-i18n="download.warning" class="fine">Test-build installation: initial installers are unsigned; macOS builds are not notarized. Choose a completed release with its manifest and SHA-256 checksums. Keep OS security protections enabled and report installation warnings.</p>
+          <section id="release-notes" class="release-notes" hidden><h3 id="release-notes-title"></h3><p id="release-notes-body"></p></section>
           <div class="faq">
             <details>
               <summary data-i18n="faq.previewq">What should I know about previews?</summary>
@@ -437,6 +442,8 @@
       </div>
     </footer>
     <script src="./site-locales.js"></script>
+    <script type="application/json" id="release-fallback">{"schemaVersion":1,"generatedAt":"2026-10-11T00:00:00Z","releases":[]}</script>
+    <script src="./release-feed.js"></script>
     <script src="./site.js"></script>
   </body>
 </html>

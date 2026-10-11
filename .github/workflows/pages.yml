@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Check website
-        run: node --test scripts/site.test.mjs
+        run: node --test scripts/*.test.mjs
       - name: Build public-only artifact
         run: node scripts/build.mjs
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3, verified 2026-10-10

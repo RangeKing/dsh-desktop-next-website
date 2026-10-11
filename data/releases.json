@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-11T10:45:00Z",
+  "releases": [
+    {
+      "status": "complete",
+      "version": "0.1.1",
+      "tagName": "v0.1.1",
+      "publishedAt": "2026-10-11T01:23:07Z",
+      "prerelease": true,
+      "releaseUrl": "https://github.com/RangeKing/dsh-desktop-next/releases/tag/v0.1.1",
+      "notes": {
+        "en": "Clearer typography with bundled Inter and Noto Sans SC fonts. Sharper native PNG product captures and a single set of window controls. Available as unsigned test builds for macOS, Windows, and Linux.",
+        "zh": "应用捆绑 Inter 与 Noto Sans SC 字体，提升中英文阅读体验。使用更清晰的原生 PNG 画面，保留一组窗口控件。提供 macOS、Windows 和 Linux 未签名测试安装包。"
+      },
+      "assets": [
+        {
+          "name": "dsh-desktop-next-0.1.1-linux-x86_64-unsigned-test.AppImage",
+          "platform": "linux",
+          "arch": "x64",
+          "format": "AppImage",
+          "sizeBytes": 357835032,
+          "sha256": "bd10efc1f99c1b008b27680e980cc034d8b13f23bd165ae90fb8caeac776f668",
+          "url": "https://github.com/RangeKing/dsh-desktop-next/releases/download/v0.1.1/dsh-desktop-next-0.1.1-linux-x86_64-unsigned-test.AppImage"
+        },
+        {
+          "name": "dsh-desktop-next-0.1.1-mac-arm64-unsigned-test.dmg",
+          "platform": "macos",
+          "arch": "arm64",
+          "format": "dmg",
+          "sizeBytes": 340028459,
+          "sha256": "346512c1ca0a4e41f1c53908fe33cbc69d0c560fec973e15bfe5cfac67764a4c",
+          "url": "https://github.com/RangeKing/dsh-desktop-next/releases/download/v0.1.1/dsh-desktop-next-0.1.1-mac-arm64-unsigned-test.dmg"
+        },
+        {
+          "name": "dsh-desktop-next-0.1.1-mac-arm64-unsigned-test.zip",
+          "platform": "macos",
+          "arch": "arm64",
+          "format": "zip",
+          "sizeBytes": 355478035,
+          "sha256": "9d77db5f1162c7fecab824d8b8833015391c66369bb0853b1740a8a6e69b5004",
+          "url": "https://github.com/RangeKing/dsh-desktop-next/releases/download/v0.1.1/dsh-desktop-next-0.1.1-mac-arm64-unsigned-test.zip"
+        },
+        {
+          "name": "dsh-desktop-next-0.1.1-mac-x64-unsigned-test.dmg",
+          "platform": "macos",
+          "arch": "x64",
+          "format": "dmg",
+          "sizeBytes": 350881839,
+          "sha256": "41d971d110427554695bfdbd8860a720518c42c36669878676dd29b5179bdf3b",
+          "url": "https://github.com/RangeKing/dsh-desktop-next/releases/download/v0.1.1/dsh-desktop-next-0.1.1-mac-x64-unsigned-test.dmg"
+        },
+        {
+          "name": "dsh-desktop-next-0.1.1-mac-x64-unsigned-test.zip",
+          "platform": "macos",
+          "arch": "x64",
+          "format": "zip",
+          "sizeBytes": 366484072,
+          "sha256": "f40ec16d647fb78fdcce663bd8ef445694487a6d45e1c6fed4f413cbbe171da2",
+          "url": "https://github.com/RangeKing/dsh-desktop-next/releases/download/v0.1.1/dsh-desktop-next-0.1.1-mac-x64-unsigned-test.zip"
+        },
+        {
+          "name": "dsh-desktop-next-0.1.1-win-x64-unsigned-test.exe",
+          "platform": "windows",
+          "arch": "x64",
+          "format": "exe",
+          "sizeBytes": 277078188,
+          "sha256": "2b0fbb57c934eebe7187ba3fc704f0b5661f64a6fd2e1cd857dc3933216e412d",
+          "url": "https://github.com/RangeKing/dsh-desktop-next/releases/download/v0.1.1/dsh-desktop-next-0.1.1-win-x64-unsigned-test.exe"
+        }
+      ],
+      "access": "repository-members",
+      "unsignedTest": true
+    }
+  ]
+}
