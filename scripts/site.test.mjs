@@ -49,3 +49,5 @@ test('task story is static by default and provenance is published by the build',
 test('product image alternatives follow language changes during walkthrough playback',()=>{const f=browserFixture();f.els['#play-demo'].listeners.click();f.els['#language'].value='zh-CN';f.els['#language'].listeners.change();assert.match(f.els['#tour-image'].alt,/剪辑/);assert.match(f.els['#hero-image'].alt,/实际桌面/);f.els['#stop-demo'].listeners.click();assert.match(f.els['#tour-image'].alt,/偏好设置/)});
 
 test('product captures keep native proportions and a single real application frame',()=>{assert.doesNotMatch(html,/class="window-top"/);assert.doesNotMatch(css,/rotate\(|aspect-ratio:\s*980\/680/);assert.match(html,/class="product-window" href=".\/assets\/process-read.jpg"/);assert.match(css,/\.product-window img\s*\{[^}]*height: auto/s)});
+
+test('typography uses named available families and CJK-specific spacing',()=>{assert.match(css,/"Noto Sans CJK SC"/);assert.match(css,/:lang\(zh-CN\) h1/);assert.doesNotMatch(css,/\bInter,|font-weight: (650|750)/);assert.match(css,/:lang\(zh-CN\) \.hero h1\s*\{[^}]*letter-spacing: -0.02em/s)});
