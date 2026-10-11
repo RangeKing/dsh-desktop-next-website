@@ -37,3 +37,25 @@ Original capture bytes are preserved; only filenames change. All three captures 
 - `process-result.png`: `fd3f3a0db126abbc7823d28dbad0f2f38e6538e95c0d3d187872178faa369a5f`
 
 - `walkthrough.gif`: `300971c9117db4f4b3611b3e4a8de02ebcbaee0f96b4ea9ba80869e083c9975b`
+
+## Extensions / 扩展
+
+The extension gallery previews 0.2.0 in the actual Linux Electron client and its running official Harness. These are original, lossless native PNG captures, published without cropping, recoloring, or an added window bar. The currently available download remains v0.1.1.
+
+扩展图集展示实际 Linux Electron 客户端中的 0.2.0 预览功能，使用原生无损 PNG，保持完整画面与原始比例。当前可下载版本仍为 v0.1.1。
+
+- `extensions-plugins.png`: actual installed/optional runtime bundle inventory. The selected developer-tools bundle is not enabled in this capture. Official plugin interfaces open in the Compatibility workspace, using the same Harness profile; this inventory image does not show an individual plugin interface.
+- `extensions-skills.png`: the imported, self-authored `fixture-review` Skill. Its complete directory was imported and read by the official resolver.
+- `extensions-mcp.png`: self-authored “Demo local tools,” validated and mounted through the actual local MCP/runtime path. The tool is an in-memory echo fixture.
+
+插件图展示真实运行时清单，所选「开发者工具」在截图中未启用。官方插件界面在沿用同一 Harness 配置的兼容工作区中打开；清单图并非单个插件界面的截图。Skills 图展示实际导入并由官方解析器读取的自编 `fixture-review`；MCP 图展示经过真实本地链路验证、挂载的自编演示回声工具。
+
+Verification scope: OAuth is covered by local mock-provider tests. Real provider authorization has not been verified. Native public-network discovery could not be completed in the verification environment; these captures do not establish community-package compatibility or end-to-end public service connectivity.
+
+验证范围：OAuth 已通过本地模拟服务测试，真实服务商授权尚未验证。验收环境中的原生公网社区查询未完成；这些截图不代表社区包兼容性或公网服务全链路验证。
+
+### Extension asset fingerprints / 扩展素材指纹
+
+- `extensions-plugins.png`: 980 × 680 · SHA-256 `5c1d229c857d512f035271e0cda9c5075d3b4931112563fcabd855fba60a76fb`
+- `extensions-skills.png`: 1188 × 848 · SHA-256 `4fb9f1688358f23c6754e9152197c9d69188da8ccddd4765212d2e0503e946d6`
+- `extensions-mcp.png`: 1188 × 848 · SHA-256 `a292c3c5a351e45c2aaed1e72cb3901b477041f436a29fde2fd992260d4fa9ab`

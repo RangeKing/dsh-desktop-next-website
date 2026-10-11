@@ -752,3 +752,8 @@ footer a {
   font-size: clamp(40px, 4.5vw, 64px);
   letter-spacing: -0.02em;
 }
+
+.extensions { background: var(--soft); }
+.extensions-context { max-width: 850px; color: var(--muted); line-height: 1.8; margin: 28px 0 0; }
+.extension-preview { color: var(--accent); max-width: 800px; line-height: 1.7; font-size: 14px; }
+#extension-image { height: auto; }

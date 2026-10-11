@@ -34,3 +34,5 @@ See [MEDIA.md](MEDIA.md) for provenance. All still product images are lossless n
 Preferences initialization is directly adapted from RangeKing/vibemeter-website `index.html` (blob `0d52449ce96cc2644e02b60e3209ad87b6daa6d2`). Locale rendering, theme tokens, responsive product-section structure, and static hosting design adapt the same site's patterns. Product copy, composition, stylesheet, safety disclosures, tests, and deployment workflow are tailored here. See `THIRD_PARTY_NOTICES.md` and retained MIT `LICENSE`.
 
 This independent client is not an official DeepSeek distribution or endorsement. Website source licensing does not grant rights to DeepSeek trademarks or relicense the private application.
+
+The task-led extension gallery previews v0.2.0 with native lossless PNG captures. The available download remains v0.1.1. See [capture notes](MEDIA.md) for provenance and verification scope.

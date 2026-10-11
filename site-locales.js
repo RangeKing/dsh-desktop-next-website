@@ -92,6 +92,20 @@ window.DSHWebsiteLocales = {
     "process.resultb": "在对话旁打开交付文档，从回答走向可以仔细审阅的成果。",
     "process.caption": "在实际桌面客户端录制的演示任务。",
     "process.source": "录制说明",
-    "process.zoom": "查看原尺寸截图 ↗"
+    "process.zoom": "查看原尺寸截图 ↗",
+    "extensions.eye": "扩展 · 0.2.0 预览",
+    "extensions.title": "为任务添上合适的能力。",
+    "extensions.body": "引入可复用的方法，连接需要的工具。在一处审阅来源、变更和生效范围，再选择如何投入使用。",
+    "extensions.preview": "即将发布的 0.2.0 功能预览。当前下载为 v0.1.1；这些扩展功能将随 v0.2.0 提供。",
+    "extensions.pluginst": "插件",
+    "extensions.pluginsb": "查看插件包、安装并启用，掌握实际运行状态。官方插件界面在兼容工作区中打开。",
+    "extensions.skillst": "Skills",
+    "extensions.skillsb": "完整导入方法及其脚本、参考资料。审阅更新内容，选择手动调用或模型调用。",
+    "extensions.mcpt": "MCP",
+    "extensions.mcpb": "配置本地或远程工具。验证连接、启动并挂载，再查看运行时实际注册的工具。",
+    "extensions.task": "在任务中打开「能力」，查看适用于当前目录和 Agent 模式的 Skills。在兼容工作区中继续操作，沿用同一任务和正在运行的 Harness。",
+    "extensions.caption": "实际客户端中的扩展演示。",
+    "extensions.source": "录制说明",
+    "extensions.zoom": "查看原尺寸截图 ↗"
   }
 };

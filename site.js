@@ -39,6 +39,7 @@
     document.title = locale === 'en' ? 'DeepSeek Harness · Desktop Next' : 'DeepSeek Harness · 桌面工作空间';
     renderTheme();
     renderProcess();
+    renderExtensions();
     renderImageDescriptions();
   }
   const processFiles = ['process-read.png', 'process-work.png', 'process-result.png'];
@@ -54,6 +55,22 @@
     for (const step of processSteps) step.setAttribute('aria-pressed', String(Number(step.dataset.step) === processIndex));
   }
   for (const step of processSteps) step.addEventListener('click', () => { processIndex = Number(step.dataset.step); renderProcess(); });
+  const extensionSteps = [...document.querySelectorAll('[data-extension]')];
+  const extensionFiles = ['extensions-plugins.png', 'extensions-skills.png', 'extensions-mcp.png'];
+  const extensionSizes = [[980,680],[1188,848],[1188,848]];
+  const extensionAlts = {en: ['Actual desktop plugin inventory showing optional runtime bundles', 'Actual desktop Skill manager showing an imported sample method', 'Actual desktop MCP manager showing validated and mounted local demonstration tools'], 'zh-CN': ['实际客户端的插件清单：可选运行时插件包', '实际客户端的 Skills 管理：已导入的演示方法', '实际客户端的 MCP 管理：已验证并挂载的本地演示工具']};
+  let extensionIndex = 0;
+  function renderExtensions() {
+    const img = document.querySelector('#extension-image');
+    const src = './assets/' + extensionFiles[extensionIndex];
+    img.src = src; img.alt = extensionAlts[locale][extensionIndex];
+    [img.width, img.height] = extensionSizes[extensionIndex];
+    document.querySelector('#extension-zoom').href = src;
+    document.querySelector('#extension-full').href = src;
+    document.querySelector('#extension-types').setAttribute('aria-label', locale === 'en' ? 'Extension types' : '扩展类型');
+    for (const step of extensionSteps) step.setAttribute('aria-pressed', String(Number(step.dataset.extension) === extensionIndex));
+  }
+  for (const step of extensionSteps) step.addEventListener('click', () => { extensionIndex = Number(step.dataset.extension); renderExtensions(); });
   language.addEventListener('change', () => {
     renderLocale(language.value); store('dsh-website-language', locale);
     const url = new URL(location.href); url.searchParams.set('lang', locale); history.replaceState(null, '', url);
