@@ -6,9 +6,9 @@ The images show the actual DSH Desktop Next Linux Electron application. The task
 
 ## Task story / 任务故事
 
-- `assets/process-read.jpg`: source-reading stage / 资料读取阶段
-- `assets/process-work.jpg`: execution records / 执行记录
-- `assets/process-result.jpg`: delivered-document review / 交付文档审阅
+- `assets/process-read.png`: source-reading stage / 资料读取阶段
+- `assets/process-work.png`: execution records / 执行记录
+- `assets/process-result.png`: delivered-document review / 交付文档审阅
 
 The task is “Product interviews to a launch brief.” Reading and progress records are controlled demonstration events. The delivered Word document is a sample file opened through the actual local Office-to-PDF preview path.
 
@@ -26,8 +26,8 @@ Capture date: October 10, 2026. These are app screenshots, not generated interfa
 
 ## Published task-image checksums / 公开任务图片校验
 
-Original capture bytes are preserved; only filenames change. All three captures are 1188 × 848 JPEG images.
+Original capture bytes are preserved; only filenames change. All three captures are lossless 1188 × 848 PNG images, exported directly by Electron capturePage().toPNG() at zoom factor 1. The application uses bundled Inter Variable and Noto Sans SC Variable fonts. The website preserves these image bytes and presents them without a rotated or simulated title bar.
 
-- `process-read.jpg`: `e5dd5d6e0fadaeb1c78397d717a0d27b136011fd44b977d0f1ada16a6efcff46`
-- `process-work.jpg`: `a9d359eca8c9f22c8305eaa884690aee853c67d83efea8c51eef2b3691062d54`
-- `process-result.jpg`: `3e899d0bddc2386b8175ebd658aa2b8ce782658b6ad0b57b593b3bf76230aa02`
+- `process-read.png`: `f9e0130e3f2ab531e854dc5737bcd0b15479a7d6a945acc08ef7a89f416001da`
+- `process-work.png`: `4d280a26c4dadb9e0ab09461ae0fcc95d7c6f39b7927e2c497568d9987231826`
+- `process-result.png`: `fd3f3a0db126abbc7823d28dbad0f2f38e6538e95c0d3d187872178faa369a5f`

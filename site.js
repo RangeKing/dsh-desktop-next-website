@@ -41,7 +41,7 @@
     renderProcess();
     renderImageDescriptions();
   }
-  const processFiles = ['process-read.jpg', 'process-work.jpg', 'process-result.jpg'];
+  const processFiles = ['process-read.png', 'process-work.png', 'process-result.png'];
   const processAlts = {en: ['Demonstration task reading source material in the actual desktop app', 'Demonstration task showing execution records in the actual desktop app', 'Demonstration task reviewing a delivered document in the actual desktop app'], 'zh-CN': ['实际桌面客户端中的演示任务：读取资料', '实际桌面客户端中的演示任务：查看执行记录', '实际桌面客户端中的演示任务：审阅交付文档']};
   const processSteps = [...document.querySelectorAll('[data-step]')];
   let processIndex = 0;
