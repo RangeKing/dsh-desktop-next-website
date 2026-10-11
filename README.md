@@ -19,7 +19,7 @@ GitHub Settings → Pages → Build and deployment → Source: GitHub Actions. E
 
 ## Release and access
 
-The website is public; `RangeKing/dsh-desktop-next` remains a private app repository. Version v0.1.1 provides builds for macOS, Windows, and Linux to repository members. The verified public feed supplies version, reviewed bilingual update notes, and exact platform/architecture links; the built-in fallback remains v0.1.1. The installation help explains unsigned test-build status and macOS notarization status alongside release checksums.
+The website is public; `RangeKing/dsh-desktop-next` remains a private app repository. Version v0.2.0 provides pre-release builds for macOS, Windows, and Linux to repository members. The verified public feed supplies version, reviewed bilingual update notes, and exact platform/architecture links; the built-in fallback remains v0.1.1. The installation help explains unsigned test-build status and macOS notarization status alongside release checksums.
 
 Publish only reviewed product copy and demonstration captures here. Application source, credentials, user documents, logs, and installer binaries belong in their original repositories. Update release information after checking the actual release; the site uses a public-only build allowlist.
 
@@ -35,7 +35,7 @@ Preferences initialization is directly adapted from RangeKing/vibemeter-website 
 
 This independent client is not an official DeepSeek distribution or endorsement. Website source licensing does not grant rights to DeepSeek trademarks or relicense the private application.
 
-The task-led extension gallery previews v0.2.0 with native lossless PNG captures. The available download remains v0.1.1. See [capture notes](MEDIA.md) for provenance and verification scope.
+The task-led extension gallery presents v0.2.0 with native lossless PNG captures. The available download is the v0.2.0 pre-release. See [capture notes](MEDIA.md) for provenance and verification scope.
 
 ## Verified release synchronization
 
@@ -48,6 +48,8 @@ The new sync workflow is prepared for a repository secret named `DSH_RELEASE_REA
 - Update notes come only from the manifest's dedicated reviewed `public_notes` field, or an explicit version-bound entry in `data/reviewed-release-notes.json` for legacy releases. They are bounded bilingual plain text.
 - Before the credential is configured, scheduled runs skip successfully with a setup-pending summary; manual runs report a clear missing-credential failure. Access/rate-limit failures, invalid manifests, and zero usable releases fail the sync without replacing the previous feed. In-progress releases and releases without reviewed public notes remain unpublished in this feed. Only data changes cause a commit. An unchanged feed skips deployment only when the public deployed JSON matches it; a failed or stale deployment is retried automatically on the next sync. If deployment fails after the feed commit, run the manual workflow with **force_deploy** checked to rebuild and redeploy the verified feed even when its data is unchanged.
 - The browser checks the complete schema, six platform combinations, fixed repository URLs, and bounded text. A build-embedded copy of the last successful feed keeps the download section usable if fetching the public JSON fails. It never downgrades to an older fetched version.
-- Installer links still require GitHub repository access. Publishing metadata does not make the source or installers public. The extension section remains explicitly a **0.2.0 preview** until a complete verified v0.2.0-or-newer feed is available.
+- Installer links still require GitHub repository access. Publishing metadata does not make the source or installers public. The extension section identifies the currently available pre-release.
 
-The initial v0.1.1 feed uses the previously verified complete release and GitHub asset metadata, including exact sizes and digests; its public update summary is written specifically for this website.
+The initial v0.1.1 history entry uses the previously verified complete release and GitHub asset metadata, including exact sizes and digests; its public update summary is written specifically for this website.
+
+The v0.2.0 feed entry was added after release run 38135691115 completed for all four platform targets and publication. Six installer sizes/digests, four platform manifests, completion metadata, and SHA256SUMS were reconciled by the publisher. This static metadata update does not activate credential-based automatic synchronization.

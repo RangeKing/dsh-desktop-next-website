@@ -47,14 +47,14 @@
     const z=locale==='zh-CN',r=current,v=r.version;
     const set=(key,text)=>{document.querySelector('[data-i18n="'+key+'"]').textContent=text;};
     set('hero.access',z?`下载 v${v} →`:`Download v${v} →`);
-    set('download.body',z?`v${v} 已提供 macOS、Windows 和 Linux 安装包。使用有仓库访问权限的 GitHub 账号下载，并核对发布页中的 SHA-256 校验值。`:`Version ${v} is available for macOS, Windows, and Linux. Sign in with repository access to download an installer and verify its SHA-256 checksums.`);
+    set('download.body',z?`v${v}${r.prerelease?' 预发行版':''}已提供 macOS、Windows 和 Linux 安装包。使用有仓库访问权限的 GitHub 账号下载，并核对发布页中的 SHA-256 校验值。`:`Version ${v}${r.prerelease?' (pre-release)':''} is available for macOS, Windows, and Linux. Sign in with repository access to download an installer and verify its SHA-256 checksums.`);
     for(const os of ['macOS','Windows','Linux'])set('target.'+os,`v${v} · `+(z?'需要仓库访问权限':'Repository access required'));
     const link=document.querySelector('[data-i18n="download.release"]');link.href=r.releaseUrl;link.textContent=z?`下载 v${v} ↗`:`Download v${v} ↗`;
     for(const a of r.assets){const link=document.querySelector('[data-release-asset="'+[a.platform,a.arch,a.format].join(':')+'"]');link.href=a.url;link.title='SHA-256: '+a.sha256;}
     const notes=document.querySelector('#release-notes');notes.hidden=false;
     document.querySelector('#release-notes-title').textContent=(z?'版本更新':'What’s new')+` · v${v}`+(r.prerelease?(z?' · 预发行':' · Pre-release'):'')+(z?' · 未签名测试版':' · Unsigned test build');
     document.querySelector('#release-notes-body').textContent=r.notes[z?'zh':'en'];
-    if(compare(v,'0.2.0')>=0){set('extensions.eye',z?'扩展':'Extensions');set('extensions.preview',z?'v0.2.0 起提供插件、Skills 和 MCP 管理。':'Plugin, Skill, and MCP management is available from v0.2.0.');}
+    if(compare(v,'0.2.0')>=0){set('extensions.eye',z?'扩展':'Extensions');set('extensions.preview',z?`v${v}${r.prerelease?' 预发行版':''}现已提供插件、Skills 与 MCP 管理。`:`Plugin, Skill, and MCP management is available in v${v}${r.prerelease?' (pre-release)':''}.`);}
   }
   function accept(feed) {
     const candidate=validate(feed)[0];

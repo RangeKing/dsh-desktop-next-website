@@ -40,9 +40,9 @@ Original capture bytes are preserved; only filenames change. All three captures 
 
 ## Extensions / 扩展
 
-The extension gallery previews 0.2.0 in the actual Linux Electron client and its running official Harness. These are original, lossless native PNG captures, published without cropping, recoloring, or an added window bar. The currently available download remains v0.1.1.
+The extension gallery previews 0.2.0 in the actual Linux Electron client and its running official Harness. These are original, lossless native PNG captures, published without cropping, recoloring, or an added window bar. The captures were recorded during development; v0.2.0 is now available as a pre-release.
 
-扩展图集展示实际 Linux Electron 客户端中的 0.2.0 预览功能，使用原生无损 PNG，保持完整画面与原始比例。当前可下载版本仍为 v0.1.1。
+扩展图集展示实际 Linux Electron 客户端中的 0.2.0 预览功能，使用原生无损 PNG，保持完整画面与原始比例。画面录制于开发阶段；v0.2.0 现已作为预发行版提供。
 
 - `extensions-plugins.png`: actual installed/optional runtime bundle inventory. The selected developer-tools bundle is not enabled in this capture. Official plugin interfaces open in the Compatibility workspace, using the same Harness profile; this inventory image does not show an individual plugin interface.
 - `extensions-skills.png`: the imported, self-authored `fixture-review` Skill. Its complete directory was imported and read by the official resolver.
