@@ -19,7 +19,7 @@ GitHub Settings → Pages → Build and deployment → Source: GitHub Actions. E
 
 ## Release and access
 
-The website is public; `RangeKing/dsh-desktop-next` remains a private app repository. Version v0.1.0 provides builds for macOS, Windows, and Linux to repository members. Download CTAs link to that exact release. The installation help explains unsigned test-build status and macOS notarization status alongside release checksums.
+The website is public; `RangeKing/dsh-desktop-next` remains a private app repository. Version v0.1.1 provides builds for macOS, Windows, and Linux to repository members. Download CTAs link to that exact release. The installation help explains unsigned test-build status and macOS notarization status alongside release checksums.
 
 Publish only reviewed product copy and demonstration captures here. Application source, credentials, user documents, logs, and installer binaries belong in their original repositories. Update release information after checking the actual release; the site uses a public-only build allowlist.
 
